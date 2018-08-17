@@ -118,6 +118,8 @@ def print_policy(states, mod=4):
    for i in range(len(states)):
       if 0 == (i % mod):
          print()
+         print('  ', end='')
+
       v = np.argmax(states[i])
       if 0 == v:
          g = '\u2190'
