@@ -112,3 +112,21 @@ def inc_counter(state, counter):
    if state not in counter:
       counter[state] = 0
    counter[state] += 1
+
+def print_policy(states, mod=4):
+   print('\n\n')
+   for i in range(len(states)):
+      if 0 == (i % mod):
+         print()
+      v = np.argmax(states[i])
+      if 0 == v:
+         g = '\u2190'
+      elif 1 == v:
+         g = '\u2193'
+      elif 2 == v:
+         g = '\u2192'
+      else:
+         g = '\u2191'
+      print(g, end='')
+
+   print('\n')
