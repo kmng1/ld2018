@@ -28,7 +28,7 @@ def update(state, action, reward, new_state, new_action, W, alpha):
    else:
       error = reward - approx(state, W[action])
 
-   W[action] += (alpha * error * state.T)
+   W[action] += (alpha * error * state)
 
 total_reward = []
 
